@@ -4,6 +4,7 @@ import path from 'path'
 import { runVite } from './runVite'
 import { detectProjectKind } from './detect'
 import { getDirectories, findNewDirectory } from './findCreatedDir'
+import { applyTemplate } from './applyTemplate'
 
 async function main() {
   const cwd = process.cwd()
@@ -23,7 +24,12 @@ async function main() {
   const projectRoot = path.join(cwd, createdDir)
   const kind = detectProjectKind(projectRoot)
 
-  console.log(`Detected project type: ${kind}`)
+  if (kind === 'react-ts') {
+    applyTemplate(projectRoot)
+    console.log('React + TypeScript template applied')
+  } else {
+    console.log(`Detected project type: ${kind}`)
+  }
 }
 
 main()
