@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "react-router-dom": "*"
+  },
+  "devDependencies": {
+    "sass": "*",
+    "vite-plugin-svgr": "*"
+  }
+}

@@ -1,0 +1,22 @@
+@use '@/shared/tools/scss' as *;
+
+:root {
+  --bg-color: #FFFFFF;
+
+  --color-accent: red;
+
+  --hover-color: red;
+
+  --error-color: red;
+
+  --text-color-light: #FFFFFF;
+  --text-color-dark: #000000;
+
+  --transition-duration: 0.2s;
+
+  --border-radius: #{fluid(25, 15)};
+  --border: #{rem(1)} solid black;
+
+  --container-width: #{rem(1440)};
+  --container-padding-x: #{fluid(100, 30)};
+}

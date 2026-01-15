@@ -1,0 +1,88 @@
+@use '@/shared/tools/scss' as *;
+
+body {
+  @include fluid-text(16, 14);
+
+  font-family: sans-serif;
+  color: var(--text-color-dark);
+  background-color: var(--bg-color);
+  font-weight: 300;
+}
+
+section {
+  &:not(:first-child) {
+    padding-top: fluid(100, 70);
+  }
+
+  &:last-child {
+    padding-bottom: fluid(100, 70);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-color-dark);
+  font-weight: 500;
+  margin: 0;
+}
+
+h1 {
+  @include fluid-text(60, 48);
+}
+
+h2 {
+  @include fluid-text(48, 40);
+}
+
+h3 {
+  @include fluid-text(40, 32);
+}
+
+h4 {
+  @include fluid-text(32, 26);
+}
+
+p {
+  --paragraphMarginBottom: #{rem(24)};
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a,
+button {
+  color: var(--text-color-dark);
+  font-weight: 400;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+
+  @include hover {
+    color: var(--hover-color);
+  }
+}
+
+a,
+button {
+  &[aria-label] {
+    position: relative;
+
+    &::before {
+      @include abs-center;
+      @include square(rem(44));
+
+      content: '';
+    }
+  }
+}
