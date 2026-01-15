@@ -15,5 +15,8 @@
     "@types/node": "^25.0.8",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "execa": "^9.6.1"
   }
 }

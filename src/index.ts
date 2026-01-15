@@ -1,3 +1,9 @@
 #!/usr/bin/env node
 
-console.log('vite-react-ts-template');
+import { runVite } from './runVite'
+
+async function main() {
+  await runVite()
+}
+
+main()
