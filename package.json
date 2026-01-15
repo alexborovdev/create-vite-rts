@@ -1,0 +1,19 @@
+{
+  "name": "vite-react-ts-template",
+  "version": "0.0.1",
+  "private": false,
+  "type": "module",
+  "bin": {
+    "create-x-vite": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.8",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
