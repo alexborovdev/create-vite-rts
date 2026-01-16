@@ -2,7 +2,6 @@
 
 import path from 'path'
 import { fileURLToPath } from 'url'
-
 import { runVite } from './runVite.js'
 import { detectProjectKind } from './detect.js'
 import { getDirectories, findNewDirectory } from './findCreatedDir.js'

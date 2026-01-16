@@ -34,14 +34,14 @@ const ViteDefault = () => {
       <h1>Vite + React</h1>
       <a
         className="github"
-        href="https://github.com/alexborovdev/vite-react-ts-template"
+        href="https://github.com/alexborovdev/create-vite-rts"
         target="_blank"
         rel="noopener noreferrer"
       >
-        GitHub Repository <code>vite-react-ts-template</code>
+        GitHub Repository <code>create-vite-rts</code>
       </a>
       <p>
-        Edit <code>src/pages/home-page/ui/HomePage.tsx</code> and save to test HMR
+        Edit <code>src/widgets/vite-default/ui/ViteDefault.tsx</code> and save to test HMR
       </p>
       <p className="docs">
         Click on the Vite and React logos to learn more

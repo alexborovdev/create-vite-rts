@@ -1,10 +1,10 @@
 {
-  "name": "vite-react-ts-template",
+  "name": "create-vite-rts",
   "version": "0.0.1",
   "private": false,
   "type": "module",
   "bin": {
-    "create-x-vite": "./dist/index.js"
+    "create-vite-rts": "./src/index.ts"
   },
   "scripts": {
     "dev": "tsx src/index.ts",
