@@ -4,11 +4,17 @@
   "private": false,
   "type": "module",
   "bin": {
-    "create-vite-rts": "./src/index.ts"
+    "create-vite-rts": "dist/index.js"
   },
+  "files": [
+    "dist",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "dev": "tsx src/index.ts",
-    "build": "tsc",
+    "build": "tsc -p tsconfig.build.json",
     "lint": "eslint ."
   },
   "devDependencies": {
