@@ -33,6 +33,7 @@ const ViteDefault = () => {
       </div>
       <h1>Vite + React</h1>
       <a
+        className="github"
         href="https://github.com/alexborovdev/vite-react-ts-template"
         target="_blank"
         rel="noopener noreferrer"

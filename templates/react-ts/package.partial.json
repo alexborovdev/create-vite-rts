@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "react-router-dom": "*"
+    "react-router-dom": "latest"
   },
   "devDependencies": {
-    "sass": "*",
-    "vite-plugin-svgr": "*"
+    "sass": "latest",
+    "vite-plugin-svgr": "latest"
   }
 }

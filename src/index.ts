@@ -1,14 +1,19 @@
 #!/usr/bin/env node
 
 import path from 'path'
-import { runVite } from './runVite'
-import { detectProjectKind } from './detect'
-import { getDirectories, findNewDirectory } from './findCreatedDir'
-import { applyTemplate } from './applyTemplate'
+import { fileURLToPath } from 'url'
+
+import { runVite } from './runVite.js'
+import { detectProjectKind } from './detect.js'
+import { getDirectories, findNewDirectory } from './findCreatedDir.js'
+import { applyTemplate } from './applyTemplate.js'
+import { mergePackageJson } from './mergePackageJson.js'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 async function main() {
   const cwd = process.cwd()
-
   const before = getDirectories(cwd)
 
   await runVite()
@@ -26,7 +31,17 @@ async function main() {
 
   if (kind === 'react-ts') {
     applyTemplate(projectRoot)
-    console.log('React + TypeScript template applied')
+
+    const templateRoot = path.resolve(
+      __dirname,
+      '..',
+      'templates',
+      'react-ts'
+    )
+
+    await mergePackageJson(projectRoot, templateRoot)
+
+    console.log('React + TypeScript project scaffolded')
   } else {
     console.log(`Detected project type: ${kind}`)
   }

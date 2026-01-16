@@ -156,6 +156,15 @@ i {
   }
 }
 
+.github {
+  font-size: 1.2em;
+
+  & code {
+    all: revert;
+    font-size: 1.2em;
+  }
+}
+
 .docs {
   color: #888;
 }
